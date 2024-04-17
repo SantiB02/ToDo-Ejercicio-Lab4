@@ -4,6 +4,7 @@ namespace ToDo_Ejercicio_Lab4.Services.Interfaces
 {
     public interface ITodoItemService
     {
+        public TodoItem? GetTodoItemById(int itemId);
         public List<TodoItem> GetTodoItemsForUser(int userId);
         public int CreateTodoItem(TodoItem todoItem);
         public void UpdateTodoItem(TodoItem todoItem);

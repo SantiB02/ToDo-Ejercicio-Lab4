@@ -13,6 +13,11 @@ namespace ToDo_Ejercicio_Lab4.Services.Implementations
             _context = todoContext;
         }
 
+        public TodoItem? GetTodoItemById(int itemId)
+        {
+            return _context.TodoItems.FirstOrDefault(ti => ti.Id_Todo_Item == itemId);
+        }
+
         public List<TodoItem> GetTodoItemsForUser(int userId)
         {
             return _context.TodoItems.Where(ti => ti.CreatorId == userId).ToList();
