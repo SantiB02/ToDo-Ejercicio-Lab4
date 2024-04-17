@@ -11,6 +11,7 @@ namespace ToDo_Ejercicio_Lab4.Data.Entities
         public string Name { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
+        public bool IsDeleted { get; set; } = false; //borrado lógico
         public ICollection<TodoItem> TodoItems { get; set; } = new List<TodoItem>();
     }
 }
